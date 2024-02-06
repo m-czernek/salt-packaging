@@ -4,5 +4,8 @@ main_workflow:
         source_project: systemsmanagement:saltstack:bundle:testing
         source_package: saltbundlepy
         target_project: home:mczernek:saltstack:bundle:testing:CI
+    - trigger_services:
+        project: home:mczernek:saltstack:bundle:testing:CI
+        package: saltbundlepy
   filters:
     event: pull_request
