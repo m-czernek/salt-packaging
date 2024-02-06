@@ -5,7 +5,7 @@ main_workflow:
         source_package: saltbundlepy
         target_project: home:mczernek:CI
     - trigger_services:
-        project: home:mczernek:CI:${SCM_ORGANIZATION_NAME}:${SCM_REPOSITORY_NAME}:PR-${SCM_PR_NUMBER}
+        project: home:mczernek:CI:%{SCM_ORGANIZATION_NAME}:%{SCM_REPOSITORY_NAME}:PR-%{SCM_PR_NUMBER}
         package: saltbundlepy
   filters:
     event: pull_request
