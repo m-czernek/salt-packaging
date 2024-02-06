@@ -1,0 +1,8 @@
+main_workflow:
+  steps:
+    - branch_package:
+        source_project: systemsmanagement:saltstack:bundle:testing
+        source_package: saltbundlepy
+        target_project: systemsmanagement:saltstack:bundle:testing:CI
+  filters:
+    event: pull_request
