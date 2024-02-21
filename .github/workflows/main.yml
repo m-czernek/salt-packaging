@@ -30,3 +30,4 @@ jobs:
           excludeDescription: 'true' # exclude the description body of a pull request
           excludeTitle: 'true' # exclude the title of a pull request
           checkAllCommitMessages: 'true' # check all commits associated with a pull request
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
