@@ -1,0 +1,11 @@
+main_workflow:
+  steps:
+    - branch_package:
+        source_project: systemsmanagement:saltstack:bundle:testing
+        source_package: venv-salt-minion
+        target_project: home:mczernek:CI
+    - trigger_services:
+        project: home:mczernek:CI:%{SCM_ORGANIZATION_NAME}:%{SCM_REPOSITORY_NAME}:PR-%{SCM_PR_NUMBER}
+        package: venv-salt-minion
+  filters:
+    event: pull_request
